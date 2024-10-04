@@ -105,4 +105,7 @@ HSC_FILTER_DEFINITIONS = FilterDefinitionCollection(
     FilterDefinition(physical_filter="NB0506", band="N506"),
     FilterDefinition(physical_filter="NB0872", band="N872"),
     FilterDefinition(physical_filter="EB-GRI", band="gri"),
+    FilterDefinition(physical_filter="EB-GRI",
+                     band="gri",
+                     doc="Aug 2023 very wide filter provided by the New Horizons team."),
 )
