@@ -1,5 +1,6 @@
 # This file is part of obs_subaru.
 #
+#
 # Developed for the LSST Data Management System.
 # This product includes software developed by the LSST Project
 # (http://www.lsst.org).
@@ -97,4 +98,7 @@ HSC_FILTER_DEFINITIONS = FilterDefinitionCollection(
                      band='N926'),
     FilterDefinition(physical_filter="NB0400",
                      band='N400'),
+    FilterDefinition(physical_filter="EB-GRI",
+                     band="gri",
+                     doc="Aug 2023 very wide filter provided by the New Horizons team."),
 )
