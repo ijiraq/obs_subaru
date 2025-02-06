@@ -21,3 +21,4 @@ config.astrometryVisitOrder = 7
 # significant effect on the model, we can bring compute time down to a few
 # days.
 config.astrometryOutlierRelativeTolerance = 0.002
+config.connections.astrometryRefCat = "gaia_dr3_20230707"
