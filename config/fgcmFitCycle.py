@@ -2,8 +2,8 @@ from lsst.fgcmcal import Sedterm, Sedboundaryterm
 from lsst.obs.hsc.hscFilters import HSC_FILTER_DEFINITIONS
 
 config.outfileBase = "fgcmHscCalibrations"
-config.bands = ["N387", "g", "r", "i", "N816", "z", "N921", "y", "N1010"]
-config.fitBands = ["N387", "g", "r", "i", "N816", "z", "N921", "y", "N1010"]
+config.bands = ["N387", "g", "r", "i", "N816", "z", "N921", "y", "N1010", "gri"]
+config.fitBands = ["N387", "g", "r", "i", "N816", "z", "N921", "y", "N1010", "gri"]
 config.physicalFilterMap = HSC_FILTER_DEFINITIONS.physical_to_band
 config.maxIterBeforeFinalCycle = 150
 config.cycleNumber = 0
@@ -25,6 +25,7 @@ config.expGrayPhotometricCutDict = {
     "N921": -0.05,
     "y": -0.05,
     "N1010": -0.05,
+    "gri": -0.05, 
 }
 config.expGrayHighCutDict = {
     "N387": 0.2,
@@ -36,12 +37,14 @@ config.expGrayHighCutDict = {
     "N921": 0.2,
     "y": 0.2,
     "N1010": 0.2,
+    "gri": 0.2,
 }
 config.aperCorrFitNBins = 10
 config.aperCorrInputSlopeDict = {
     "N387": -1.0,
     "g": -1.1579,
     "r": -1.3908,
+    "gri": -1.3908,
     "i": -1.1436,
     "N816": -1.8149,
     "z": -1.6974,
@@ -64,6 +67,7 @@ config.superStarSubCcdDict = {
     "N387": False,
     "g": True,
     "r": True,
+    "gri": True,
     "i": True,
     "N816": True,
     "z": True,
@@ -78,6 +82,7 @@ config.ccdGraySubCcdDict = {
     "N387": False,
     "g": True,
     "r": True,
+    "gri": True,
     "i": True,
     "N816": True,
     "z": True,
@@ -92,6 +97,7 @@ config.ccdGrayFocalPlaneDict = {
     "N387": True,
     "g": True,
     "r": True,
+    "gri": True,
     "i": True,
     "N816": True,
     "z": True,
@@ -108,6 +114,7 @@ config.expVarGrayPhotometricCutDict = {
     "N387": 0.05,
     "g": 0.0025,
     "r": 0.0025,
+    "gri": 0.0025,
     "i": 0.0025,
     "N816": 0.05,
     "z": 0.0025,
@@ -120,6 +127,7 @@ config.useRepeatabilityForExpGrayCutsDict = {
     "N387": True,
     "g": False,
     "r": False,
+    "gri": False,
     "i": False,
     "N816": True,
     "z": False,
@@ -131,6 +139,7 @@ config.sigFgcmMaxEGrayDict = {
     "N387": 0.15,
     "g": 0.05,
     "r": 0.05,
+    "gri": 0.05,
     "i": 0.05,
     "N816": 0.15,
     "z": 0.05,
@@ -142,6 +151,7 @@ config.approxThroughputDict = {
     "N387": 1.0,
     "g": 1.0,
     "r": 1.0,
+    "gri": 1.0,
     "i": 1.0,
     "N816": 1.0,
     "z": 1.0,
@@ -163,6 +173,7 @@ config.sedboundaryterms.data = {
 config.sedterms.data = {
     "g": Sedterm(primaryTerm="gr", secondaryTerm="ri", constant=1.6),
     "r": Sedterm(primaryTerm="gr", secondaryTerm="ri", constant=0.9),
+    "gri": Sedterm(primaryTerm="gr", secondaryTerm="ri", constant=0.9),
     "i": Sedterm(primaryTerm="ri", secondaryTerm="iz", constant=1.0),
     "z": Sedterm(primaryTerm="iz", secondaryTerm="zy", constant=1.0),
     "y": Sedterm(
