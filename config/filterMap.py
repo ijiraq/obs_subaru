@@ -49,7 +49,5 @@ for source, target in [
         ('NB1010', 'y'),
         # Intermediate bands
         ('IB0945', 'z'),
-        # Extended bands
-        ('EB-GRI', 'r'),
     ]:
     config.filterMap[source] = target
