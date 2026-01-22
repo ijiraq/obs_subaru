@@ -29,6 +29,7 @@ for source, target in [
         ("HSC-Z", "z"),
         ("HSC-Y", "y"),
         ("EB-GRI", "r"),
+        ("gri", "r"),
         # Narrow bands
         ('NB0387', 'g'),
         ('NB0391', 'g'),

@@ -25,7 +25,7 @@ config.expGrayPhotometricCutDict = {
     "N921": -0.05,
     "y": -0.05,
     "N1010": -0.05,
-    "gri": -0.05, 
+    "gri": -0.05,
 }
 config.expGrayHighCutDict = {
     "N387": 0.2,
